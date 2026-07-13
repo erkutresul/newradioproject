@@ -3,16 +3,12 @@
 Bu proje, React ve Vite kullanılarak tasarlanmış, **GitHub Pages** üzerinde ücretsiz ve kolay bir şekilde yayınlanabilen, gerçek zamanlı UTC senkronizasyonuna sahip bir internet radyosudur.
 Radyo, özel bir **Global UTC Senkronizasyon algoritması** kullanarak gerçek radyo hissiyatı uyandırır. Kullanıcılar ne zaman girerse girsin, tüm dünyadaki dinleyicilerle aynı saniyede, aynı şarkıyı dinler.
 
----
-
 ## Öne Çıkan Özellikler
 
 - **Zaman Tabanlı Senkronizasyon (UTC)**: Şarkıların toplam süresi üzerinden gün başından itibaren geçen saniyeye göre hangi şarkının çalacağı dinamik hesaplanır.
 - **Modern ve Akıcı Arayüz**: Tailwind CSS ve Framer Motion ile desteklenen şık, neon etkili ve cam görünümlü (glassmorphism) tasarım.
 - **Web Audio API Tabanlı Frekans Analizörü**: Müziğe göre gerçek zamanlı tepki veren animasyonlu ses dalgaları.
 - **Kolay Playlist Yönetimi**: Bir JSON dosyası ile kod yazmadan radyo yayın akışını değiştirebilme.
-
----
 
 ## Yerel Ortamda Çalıştırma
 
@@ -28,8 +24,6 @@ Geliştirme ortamınızda (kendi bilgisayarınızda) radyoyu test etmek için ş
    npm run dev
    ```
 4. Tarayıcınızda [http://localhost:3000](http://localhost:3000) adresine giderek radyoyu dinlemeye başlayın.
-
----
 
 ## Playlist ve Müzik Yönetimi
 
@@ -53,8 +47,6 @@ Radyoda çalacak şarkıları değiştirmek çok basittir:
 - Şarkı kapak fotoğraflarınızı (`.jpg`, `.png`) `/public/covers/` klasörüne atın.
 - `duration` değeri **saniye** cinsinden tam uzunluk olmalıdır. Örneğin şarkı 3 dakika 20 saniye ise `duration: 200` yapmalısınız. Aksi takdirde senkronizasyon bozulur.
 
----
-
 ## GitHub Pages Üzerinde Yayınlama
 
 Bu projeyi **tamamen ücretsiz** bir şekilde GitHub Pages'te yayınlayabilirsiniz! Projede GitHub Actions (deploy.yml) ayarları hazırdır. 
@@ -69,8 +61,6 @@ Radyonuzu hemen yayına almak için bu adımları takip edin:
 
 *Eğer temanın, görsellerin veya müziklerin Github Pages üzerinde tam yüklenmemesi gibi bir sorun yaşarsanız:*
 Proje ana dizinindeki `vite.config.ts` dosyasını açın ve `base: './',` ayarını projenizin ismine göre güncelleyin. Örneğin depo isminiz "x-radio" ise: `base: '/x-radio/',` olarak değiştirin ve kodunuzu Github'a tekrar gönderin (push).
-
----
 
 ## Kullanılan Teknolojiler
 
