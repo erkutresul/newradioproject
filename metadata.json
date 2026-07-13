@@ -1,6 +1,6 @@
 {
-  "name": "NewRadioProject",
-  "description": "-",
+  "name": "NewRadioProject v1.0",
+  "description": "Sen de katıl!",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
