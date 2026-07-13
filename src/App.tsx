@@ -75,7 +75,7 @@ export default function App() {
 
   const handleShare = async () => {
     const shareData = {
-      title: 'NewRadioProject',
+      title: 'NewRadioProject v1.0',
       text: 'Sen de katıl!',
       url: window.location.href,
     };
@@ -153,10 +153,6 @@ export default function App() {
     return () => clearInterval(clockInterval);
   }, []);
 
-  /**
-   * Kullanıcının girdiği andaki UTC saatine göre tüm playlist içindeki
-   * doğru şarkıyı ve bu şarkının içindeki doğru saniyeyi (offset) hesaplar.
-   */
   const getGlobalSyncPosition = (tracks: Track[]) => {
     if (tracks.length === 0) return { index: 0, offset: 0 };
 
@@ -205,9 +201,6 @@ export default function App() {
     }
   };
 
-  /**
-   * Radyoyu tam olarak küresel canlı yayına (UTC tabanlı hesaplamaya) eşitler.
-   */
   const syncWithLiveBroadcast = () => {
     if (!audioRef.current || playlist.length === 0) return;
 
@@ -416,10 +409,6 @@ export default function App() {
     };
   }, [isPlaying]);
 
-  /**
-   * Yayına Katıl butonu veya Play tuşuna basıldığında tetiklenir.
-   * AudioContext'i canlandırır ve yayını en güncel saniyesinden oynatır.
-   */
   const handlePlay = async () => {
     if (!audioRef.current || playlist.length === 0) return;
 
@@ -460,19 +449,12 @@ export default function App() {
     }
   };
 
-  /**
-   * Yayını durdurur. Gerçek radyo mantığı gereği, tekrar oynatıldığında
-   * geçmişte kalınan saniyeden değil, o anki güncel UTC saniyesinden devam edecektir.
-   */
   const handlePause = () => {
     if (!audioRef.current) return;
     audioRef.current.pause();
     setIsPlaying(false);
   };
 
-  /**
-   * Ses seviyesi değişimini kontrol eder.
-   */
   const handleVolumeChange = (e: ChangeEvent<HTMLInputElement>) => {
     const val = parseFloat(e.target.value);
     setVolume(val);
@@ -484,9 +466,6 @@ export default function App() {
     }
   };
 
-  /**
-   * Sesi tamamen kapatıp açma (Mute) fonksiyonu.
-   */
   const handleToggleMute = () => {
     if (!audioRef.current) return;
     const targetMute = !isMuted;
@@ -517,17 +496,11 @@ export default function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isPlaying, isMuted, playlist]);
 
-  /**
-   * Şarkı bittiğinde veya oynatılırken saniye saniye çalışır.
-   */
   const handleTimeUpdate = () => {
     if (!audioRef.current) return;
     setCurrentTime(audioRef.current.currentTime);
   };
 
-  /**
-   * Şarkı bittiğinde tetiklenir, bir sonraki şarkıya canlı akışa göre geçer.
-   */
   const handleTrackEnded = () => {
     syncWithLiveBroadcast();
     if (audioRef.current) {
@@ -611,7 +584,7 @@ export default function App() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 bg-emerald-400"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </span>
-                <span>Şu an dinleyen: <strong className="text-white font-semibold">{listenerCount.toLocaleString('tr-TR')}</strong> kişi</span>
+                <span>Çevrimiçi: <strong className="text-white font-semibold">{listenerCount.toLocaleString('tr-TR')}</strong></span>
               </div>
 
               {/* Paylaş Butonu */}
@@ -623,7 +596,7 @@ export default function App() {
                     ? 'bg-neutral-800 border-neutral-600 text-white'
                     : 'bg-neutral-900 border-neutral-800 text-neutral-300 hover:text-white hover:bg-neutral-800 hover:border-neutral-700'
                 }`}
-                title="Yayın Bağlantısını Paylaş"
+                title="Paylaş"
               >
                 {copied ? (
                   <>
@@ -712,7 +685,7 @@ export default function App() {
                   <div className="flex justify-between items-center text-[11px] font-mono text-neutral-400">
                     <span>{formatTime(currentTime)}</span>
                     <span className="flex items-center gap-1">
-                      <span className="w-1.5 h-1.5 rounded-full animate-pulse bg-white"></span>
+                      <span className="w-1.5 h-1.5 rounded-full animate-pulse bg-red"></span>
                       Canlı
                       <span className="text-neutral-700">|</span>
                       {currentTrack ? formatTime(currentTrack.duration) : '00:00'}
