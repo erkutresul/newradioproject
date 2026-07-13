@@ -1,6 +1,6 @@
 # NewRadioProject
 
-<p align="justify">Proje, React ve Vite kullanılarak tasarlanmış, GitHub Pages üzerinde ücretsiz ve kolay bir şekilde yayınlanabilen, gerçek zamanlı UTC senkronizasyonuna sahip bir internet radyosudur. Radyo, özel bir Global UTC Senkronizasyon algoritması kullanarak gerçek radyo hissiyatı uyandırır. Kullanıcılar ne zaman girerse girsin, tüm dünyadaki dinleyicilerle aynı saniyede, aynı şarkıyı dinler.</p>
+<p align="justify">Bu proje, React ve Vite kullanılarak tasarlanmış, GitHub Pages üzerinde ücretsiz ve kolay bir şekilde yayınlanabilen, gerçek zamanlı UTC senkronizasyonuna sahip bir internet radyosudur. Radyo, özel bir Global UTC Senkronizasyon algoritması kullanarak gerçek radyo hissiyatı uyandırır. Kullanıcılar ne zaman girerse girsin, tüm dünyadaki dinleyicilerle aynı saniyede, aynı şarkıyı dinler.</p>
 
 ## Öne Çıkan Özellikler
 
