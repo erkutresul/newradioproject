@@ -45,7 +45,7 @@ Radyoda çalacak şarkıları değiştirmek çok basittir:
 **Önemli Notlar:**
 - Şarkı ses dosyalarınızı (`.mp3`) `/public/music/` klasörüne atın.
 - Şarkı kapak fotoğraflarınızı (`.jpg`, `.png`) `/public/covers/` klasörüne atın.
-- `duration` değeri **saniye** cinsinden tam uzunluk olmalıdır. Örneğin şarkı 3 dakika 20 saniye ise `duration: 200` yapmalısınız. Aksi takdirde senkronizasyon bozulur.
+- `duration` değeri **saniye** cinsinden tam uzunluk olmalıdır. *Örneğin* şarkı 3 dakika 20 saniye ise `duration: 200` yapmalısınız. Aksi takdirde senkronizasyon bozulur.
 
 ## GitHub Pages Üzerinde Yayınlama
 
@@ -61,4 +61,4 @@ Radyonuzu hemen yayına almak için bu adımları takip edin:
 
 *Eğer temanın, görsellerin veya müziklerin Github Pages üzerinde tam yüklenmemesi gibi bir sorun yaşarsanız:*
 
-Proje ana dizinindeki `vite.config.ts` dosyasını açın ve `base: './',` ayarını projenizin ismine göre güncelleyin. **Örneğin** depo isminiz "x-radio" ise: `base: '/x-radio/',` olarak değiştirin ve kodunuzu Github'a tekrar gönderin (push).
+Proje ana dizinindeki `vite.config.ts` dosyasını açın ve `base: './',` ayarını projenizin ismine göre güncelleyin. *Örneğin* depo isminiz "x-radio" ise: `base: '/x-radio/',` olarak değiştirin ve kodunuzu Github'a tekrar gönderin (push).
