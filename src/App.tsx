@@ -685,7 +685,7 @@ export default function App() {
                   <div className="flex justify-between items-center text-[11px] font-mono text-neutral-400">
                     <span>{formatTime(currentTime)}</span>
                     <span className="flex items-center gap-1">
-                      <span className="w-1.5 h-1.5 rounded-full animate-pulse bg-red"></span>
+                      <span className="w-1.5 h-1.5 rounded-full animate-pulse bg-white"></span>
                       Canlı
                       <span className="text-neutral-700">|</span>
                       {currentTrack ? formatTime(currentTrack.duration) : '00:00'}
