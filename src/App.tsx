@@ -572,7 +572,7 @@ export default function App() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 bg-emerald-400"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </span>
-                <span className="text-white font-semibold">v1.0 V1.0</span>
+                <span className="text-white font-semibold">v1.0</span>
               </div>
 
               {/* Paylaş Butonu */}
